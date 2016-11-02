@@ -1,0 +1,12 @@
+<div ng-controller="SwapiPlanetsController as planets">
+  <p>This is the partial for view 1.</p>
+
+  <div ng-repeat="planet in planets.results">
+    <ul>
+      <li>Name: {{planet.name}}</li>
+      <li>Climate: {{planet.climate}}</li>
+      <li>Population: {{planet.population}}</li>
+    </ul>
+  </div>
+
+</div>

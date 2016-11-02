@@ -1,0 +1,12 @@
+<div ng-controller="SwapiFilmsController as films">
+  <p>This is the partial for view 1.</p>
+
+  <div ng-repeat="film in films.results">
+    <ul>
+      <li>Title: {{film.title}}</li>
+      <li>Episode: {{film.episode_id}}</li>
+      <li>Release Date: {{film.release_date}}</li>
+    </ul>
+  </div>
+
+</div>

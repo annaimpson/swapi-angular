@@ -1,0 +1,13 @@
+<div ng-controller="SwapiPeopleController as people">
+  <p>This is the partial for view 1.</p>
+
+  <div ng-repeat="person in people.results">
+    <ul>
+      <li>Name: {{person.name}}</li>
+      <li>Sex: {{person.gender}}</li>
+      <li>Height: {{person.height}}</li>
+      <li>DOB: {{person.birth_year}}</li>
+    </ul>
+  </div>
+
+</div>

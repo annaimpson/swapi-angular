@@ -1,0 +1,13 @@
+<div ng-controller="SwapiSpeciesController as species">
+  <p>This is the partial for view 1.</p>
+
+  <div ng-repeat="species in species.results">
+    <ul>
+      <li>Name: {{species.name}}</li>
+      <li>Classification: {{species.classification}}</li>
+      <li>Language: {{species.language}}</li>
+      <li>Average Lifespan: {{species.average_lifespan}}</li>
+    </ul>
+  </div>
+
+</div>
