@@ -1,0 +1,62 @@
+.menu {
+  padding: 5% 0 0 5%; }
+  .menu li a {
+    color: #d61e0c;
+    letter-spacing: 2px; }
+  .menu a:hover {
+    text-decoration: none;
+    color: #fbfbfb; }
+
+body {
+  background-color: black; }
+
+.container img {
+  width: 100%; }
+
+.people li {
+  color: grey;
+  letter-spacing: 1px;
+  line-height: 175%; }
+.people h1 {
+  color: #333333; }
+.people h1 a {
+  color: #333333; }
+.people a:hover {
+  color: #1b87de;
+  text-decoration: none; }
+
+.species li {
+  color: grey;
+  letter-spacing: 1px;
+  line-height: 175%; }
+.species h1 a {
+  color: #333333; }
+.species a:hover {
+  color: #1b87de;
+  text-decoration: none; }
+
+.planets li {
+  color: grey;
+  letter-spacing: 1px;
+  line-height: 175%; }
+.planets h1 {
+  color: #333333; }
+.planets h1 a {
+  color: #333333; }
+.planets a:hover {
+  color: #1b87de;
+  text-decoration: none; }
+
+.films li {
+  color: grey;
+  letter-spacing: 1px;
+  line-height: 175%; }
+.films h1 {
+  color: #333333; }
+.films h1 a {
+  color: #333333; }
+.films a:hover {
+  color: #1b87de;
+  text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */
