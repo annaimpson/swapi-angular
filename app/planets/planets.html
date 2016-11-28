@@ -1,9 +1,9 @@
-<div class="container" ng-controller="SwapiPlanetsController as planets">
+<div class="container">
 
   <div ng-repeat="planet in planets.results">
     <div class="col-md-4">
       <ul class="list-unstyled planets">
-        <li><h1><a href="#!/planets-detail">{{planet.name}}</a></h1></li>
+        <li><h1><a href="#!/planet/{{planet.id}}">{{planet.name}}</a></h1></li>
         <li>Climate: {{planet.climate}}</li>
         <li>Population: {{planet.population}}</li>
       </ul>

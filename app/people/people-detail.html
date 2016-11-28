@@ -1,0 +1,37 @@
+<div class="container" ng-submit="person.addReview(personReview)">
+  <div class="col-md-4">
+    <ul class="list-unstyled people">
+      <li><h1>{{person.name}}</h1></li>
+      <li>Sex: {{person.gender}}</li>
+      <li>Height: {{person.height}}</li>
+      <li>DOB: {{person.birth_year}}</li>
+    </ul>
+  </div>
+  <div class="col-md-12">
+    <form name="reviewForm" id="reviewForm">
+      <blockquote>
+        <b>Stars: {{review.stars}}</b>
+        <p id="review">{{review.body}}</p>
+        <cite>by: {{review.author}}</cite>
+      </blockquote>
+
+      <select name="" id="" ng-model="review.stars">
+        <option value="1">1 star</option>
+        <option value="2">2 stars</option>
+        <option value="3">3 stars</option>
+        <option value="4">4 stars</option>
+        <option value="5">5 stars</option>
+      </select>
+
+      <textarea name="" id="" cols="40" rows="5" placeholder="Write a short review of the person..." ng-model="review.body"></textarea>
+      <label for="">by:</label>
+      <input type="email" class="input-xlarge" placeholder="Email" ng-model="review.author">
+      <button type="submit" ng-click="saveEvent(event)" class="btn btn-primary">Submit</button>
+      <button type="button" onclick="myFunction()" ng-click="cancelEdit()" class="btn btn-default" id="cancelEdit">Cancel</button>
+    </form>
+  </div>
+</div>
+
+<script>
+
+</script>

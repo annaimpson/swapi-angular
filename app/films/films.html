@@ -1,11 +1,11 @@
-<div class="container" ng-controller="SwapiFilmsController as films">
+<div class="container">
 
   <div ng-repeat="film in films.results">
     <div class="col-md-4">
       <ul class="list-unstyled films">
-        <li><h1><a href="#!/films-detail">{{film.title}}</a></h1></li>
+        <li><h1><a href="#!/film/{{film.id}}">{{film.title}}</a></h1></li>
         <li>Episode: {{film.episode_id}}</li>
-        <li>Release Date: {{film.release_date}}</li>
+        <li>Release Date: {{film.release_date | date: 'MMM dd, yyyy'}}</li>
       </ul>
     </div>
   </div>

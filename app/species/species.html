@@ -1,9 +1,9 @@
-<div class="container" ng-controller="SwapiSpeciesController as species">
+<div class="container">
 
   <div ng-repeat="species in species.results">
     <div class="col-md-4">
       <ul class="list-unstyled species">
-        <li><h1><a href="#!/species-detail">{{species.name}}</a></h1></li>
+        <li><h1><a href="#!/species/{{species.id}}">{{species.name}}</a></h1></li>
         <li>Classification: {{species.classification}}</li>
         <li>Language: {{species.language}}</li>
         <li>Average Lifespan: {{species.average_lifespan}}</li>

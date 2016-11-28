@@ -1,15 +1,13 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-var app = angular.module('myApp', ['ngRoute', 'people', 'planets', 'species', 'films']).
+var myApp = angular.module('myApp', ['ngRoute', 'ngResource'])
 
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+.config(function($locationProvider, $routeProvider) {
   $routeProvider.when('/home',
   {
     templateUrl: 'home/home.html'
-    // controller: 'SwapiFilmsController'
   });
-
 
   $routeProvider.when('/people',
   {
@@ -17,9 +15,10 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
     controller: 'SwapiPeopleController'
   });
 
-  $routeProvider.when('/people-detail',
+  $routeProvider.when('/person/:personId',
   {
-    templateUrl: 'people-detail/people-detail.html'
+    templateUrl: 'people/people-detail.html',
+    controller: 'SwapiPeopleDetailController'
   });
 
   $routeProvider.when('/planets',
@@ -28,9 +27,10 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
     controller: 'SwapiPlanetsController'
   });
 
-  $routeProvider.when('/planets-detail',
+  $routeProvider.when('/planet/:planetId',
   {
-    templateUrl: 'planets-detail/planets-detail.html'
+    templateUrl: 'planets/planets-detail.html',
+    controller: 'SwapiPlanetDetailController'
   });
 
   $routeProvider.when('/species',
@@ -39,11 +39,11 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
     controller: 'SwapiSpeciesController'
   });
 
-  $routeProvider.when('/species-detail',
+  $routeProvider.when('/species/:speciesId',
   {
-    templateUrl: 'species-detail/species-detail.html'
+    templateUrl: 'species/species-detail.html',
+    controller: 'SwapiSpeciesDetailController'
   });
-
 
   $routeProvider.when('/films',
   {
@@ -51,12 +51,13 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
     controller: 'SwapiFilmsController'
   });
 
-  $routeProvider.when('/films-detail',
+  $routeProvider.when('/film/:filmId',
   {
-    templateUrl: 'films-detail/films-detail.html'
+    templateUrl: 'films/films-detail.html',
+    controller: 'SwapiFilmDetailController'
   });
 
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/home'});
-}]);
+  // $routeProvider.otherwise({redirectTo: '/home'});
+});

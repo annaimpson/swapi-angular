@@ -1,9 +1,13 @@
-<div class="container" ng-controller="SwapiPeopleController as people">
+<div class="container">
+
+  <h6>{{people.results[id]}}</h6>
+  <h6><a href="#!/person/{{people.results}}">{{people.results[1]}}</a></h6>
 
   <div ng-repeat="person in people.results">
     <div class="col-md-4">
       <ul class="list-unstyled people">
-        <li><h1><a href="#!/people-detail">{{person.name}}</a></h1></li>
+        <li><h1 id="name"><a href="#!/person/{{people.results.person-id}}">{{person.name}}</a></h1></li>
+        <li>ID: {{people.results.person-id}}</li>
         <li>Sex: {{person.gender}}</li>
         <li>Height: {{person.height}}</li>
         <li>DOB: {{person.birth_year}}</li>
